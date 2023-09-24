@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Functions Example</title>
+  </head>
+  <body>
+    <h1>JavaScript Functions Examples</h1>
+    <h3>Check the Inspect Tools - Console</h3>
+    <script>
+      //We will also discuss Parameters and Arguments,
+      //executing (starting, calling, fire or running) a function and
+      //using console.log() effectively to test the functions results.
+
+      //Declared Functions, HOISTED
+
+      function addNums(num1, num2) {
+        var sum = num1 + num2;
+        console.log("This is the sum:", sum);
+        console.log(`${num1} and ${num2} =`, sum);
+        //back tick Concatenations/Interpolation
+        return sum;
+      }
+
+      var result = addNums(4, 6); // 4, 6 are the arguments
+      console.log("This is the result of addNums: ", result);
+
+      //Function Expressions, NOT HOISTED
+
+      //   var getRectangleArea = function (width, height) {
+      //     var area = width * height;
+      //     console.log("This is the total area noted from within the function expression: ", area);
+      //     return area;
+      //   };
+
+      //   var totalArea = getRectangleArea(50, 100);
+      //   console.log("This is the total area from outside the function expression: ", totalArea);
+
+      //Arrow Functions - simpler to write,
+
+      var getRectangleArea = (width, height) => {
+        var area = width * height;
+        console.log("This is the total area noted from within the function expression: ", area);
+        return area;
+      };
+
+      var totalArea = getRectangleArea(50, 100);
+      console.log("This is the total area from outside the function expression: ", totalArea);
+
+      //Anonymous Functions
+    </script>
+  </body>
+</html>
+

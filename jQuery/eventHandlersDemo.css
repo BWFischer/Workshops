@@ -1,0 +1,84 @@
+/* Best Practices:  Do not target html elements.  Create unique id's or general classes */
+
+.headerOne,
+.unOrderedList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.headerOne {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+.headerFour {
+  display: inline;
+}
+
+/* Demo container styles */
+.targetDiv,
+.targetDivTwo {
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+}
+
+.demo {
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+}
+
+/* Paragraph styles */
+.para {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Button styles */
+#btnClick {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* List styles - removes the bullets*/
+.listItem {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.footerStyle {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+}
+
+.colorChange {
+  background-color: #12f506;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}

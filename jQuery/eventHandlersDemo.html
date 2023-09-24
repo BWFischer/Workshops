@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handlers</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+      /* Best Practices:  Do not target html elements.  Create unique id's or general classes */
+
+      .headerOne,
+      .unOrderedList {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .main {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header styles */
+      .headerOne {
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+      }
+
+      .headerFour {
+        display: inline;
+      }
+
+      /* Demo container styles */
+      .targetDiv,
+      .targetDivTwo {
+        border: 1px solid #333;
+        padding: 10px;
+        margin: 10px;
+        background-color: #fff;
+      }
+
+      .demo {
+        border: 1px solid #333;
+        padding: 10px;
+        margin: 10px;
+        background-color: #fff;
+      }
+
+      /* Paragraph styles */
+      .para {
+        color: blue;
+        font-weight: bold;
+      }
+
+      /* Button styles */
+      #btnClick {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      /* List styles - removes the bullets*/
+      .listItem {
+        padding: 5px 0;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .footerStyle {
+        text-align: center;
+        margin-top: 20px;
+        color: #777;
+      }
+
+      .colorChange {
+        background-color: #12f506;
+      }
+
+      .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+      }
+    </style>
+  </head>
+
+  <body class="main" data-ins="pw-00">
+    <div class="container">
+      <header>
+        <h1 class="headerOne">jQuery Event Handler Demo</h1>
+      </header>
+
+      <div class="targetDiv">
+        <button class="btn btn-warning demo" id="addDynamic">Click to Change</button>
+        <h4 class="headerFour">Change the div contents Dynamically</h4>
+      </div>
+
+      <div class="targetDivTwo">
+        <button class="btn btn-primary demo" id="btnClick">Click Me!</button>
+        <h4 class="headerFour">Send an Alert!</h4>
+      </div>
+
+      <div>
+        <p class="para">Hover over this is a paragraph. Check the Console!</p>
+      </div>
+
+      <ul class="unOrderedList">
+        <li class="listItem">Click this List item 1</li>
+        <li class="listItem">Click this List item 2</li>
+        <li class="listItem">Click this List item 3</li>
+      </ul>
+      <h3>Event Delegation</h3>
+      <div class="container-that-holds-stuff">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card item">
+              <!-- the class .item is in the <div> -->
+              <div class="card-body">
+                <h5 class="card-title">The class .item is in the div.</h5>
+                <p class="card-text">Click Anywhere to Change the Color</p>
+                <p class="btn btn-primary">Change Me!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">The class .item is in the button.</h5>
+                <p class="card-text">Click the Button to Change the Color</p>
+                <p class="btn btn-primary item">Change Me!</p>
+                <!-- the class .item is in the button -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="eventHandlersDemo.js"></script> -->
+    <script>
+      $(document).ready(function () {
+        wireUpHandlers();
+      });
+
+      function wireUpHandlers() {
+        // click events
+        $("li").click(listItemHandler);
+        $(".targetDiv").click(demoDivHandler);
+        $("#btnClick").click(btnClickHandler);
+        // .on("click") handlers
+        $("#addDynamic").on("click", addDynamicHandler);
+        $(".para").on("mouseover mouseout", paraHandler);
+        $(".container-that-holds-stuff").on("click", ".item", changeCardColor);
+      }
+
+      var listItemHandler = function () {
+        console.log("The Paragraph Element <p> was Clicked");
+      };
+
+      var demoDivHandler = function () {
+        console.log("demoDivHandler was Clicked");
+      };
+
+      var btnClickHandler = function () {
+        console.log("btnClickHandler was Clicked");
+        alert("Button with ID btnClick was Clicked");
+      };
+
+      var addDynamicHandler = function () {
+        console.log("addDynamicHandler was Clicked");
+        $(".targetDiv").html(
+          `<button class="btn btn-danger">Changed!</button> <h4 class="headerFour">This is now a dynamically changed button and paragraph.</h4>`
+        );
+      };
+
+      var paraHandler = function () {
+        console.log("paraHandler was Clicked");
+      };
+
+      var changeCardColor = function () {
+        $(this).closest(".card").toggleClass("colorChange");
+        console.log("changeCardColor clicked");
+      };
+    </script>
+  </body>
+</html>

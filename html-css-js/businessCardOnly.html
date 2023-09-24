@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Card Demo</title>
+    <style>
+      .bodyStyle {
+        font-family: Arial, sans-serif;
+        background-color: #bec4c5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 100px;
+      }
+
+      .business-card {
+        width: 300px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        background-color: #3498db;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+      }
+
+      .name {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .job-title {
+        font-size: 18px;
+        color: #777;
+      }
+
+      .contact-info {
+        margin-top: 20px;
+      }
+
+      /* Form styles */
+      form {
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      /* Limit input fields to 80% of the card width */
+      form input {
+        width: 80%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      form label {
+        font-weight: bold;
+      }
+
+      form button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      form button:hover {
+        background-color: #ffee00;
+        color: rgb(2, 0, 0);
+      }
+    </style>
+  </head>
+
+  <body class="bodyStyle">
+    <div class="container">
+      <h1>Business Card Demo</h1>
+      <h4>Code Small - Dream Big</h4>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="business-card">
+            <div class="logo">BC</div>
+            <div class="name">Michael Smith</div>
+            <div class="job-title">Full-Stack Developer</div>
+            <div class="job-title">Software Engineer</div>
+
+            <div class="contact-info">
+              <p>Email: <span id="email"> ms01@developer.io@email.com</span></p>
+              <p>Phone: <span id="phone"> 1(234)567-8901 </span></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script></script>
+  </body>
+</html>

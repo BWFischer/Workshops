@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: red;
+        margin: 5px;
+      }
+
+      p {
+        margin: 5px;
+        width: 50%;
+      }
+
+      img {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <
+  <body>
+    <h1>Welcome to Coding!!!</h1>
+
+    <!-- 
+    <h2>Welcome to Coding!!!</h2>
+    <h3>Welcome to Coding!!!</h3>
+    <h6>Welcome to Coding!!!</h6>
+     -->
+
+    <div>
+      <img src="sabio_cod_small_dream_big.png" alt="Sabio Logo" width="200" height="200" />
+    </div>
+    <div>
+      <h3>A "Centered" Div</h3>
+      <p style="text-align: center">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac egestas libero. Fusce vehicula nisl nec magna vulputate, ac laoreet neque viverra.
+        Pellentesque sit amet tincidunt ligula. Nunc pretium, lectus at scelerisque bibendum, metus nulla bibendum nunc, vitae bibendum enim tortor at sapien.
+        In hac habitasse platea dictumst. Integer vel ex ultricies, fermentum est semper, luctus erat. Integer convallis imperdiet egestas. Etiam fringilla
+        nulla lacus, ut auctor risus viverra et.
+      </p>
+      <br />
+      <h3>A "Justified" Div</h3>
+      <p style="text-align: justify">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac egestas libero. Fusce vehicula nisl nec magna vulputate, ac laoreet neque viverra.
+        Pellentesque sit amet tincidunt ligula. Nunc pretium, lectus at scelerisque bibendum, metus nulla bibendum nunc, vitae bibendum enim tortor at sapien.
+        In hac habitasse platea dictumst. Integer vel ex ultricies, fermentum est semper, luctus erat. Integer convallis imperdiet egestas. Etiam fringilla
+        nulla lacus, ut auctor risus viverra et.
+      </p>
+    </div>
+  </body>
+</html>

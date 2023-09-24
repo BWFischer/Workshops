@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript For-Loop Examples</title>
+  </head>
+  <body>
+    <h1>JavaScript For-Loop Examples</h1>
+    <h3>Check the Inspect Tools - Console</h3>
+    <!-- VS Code Extensions,Sabio PreWork, Live Server, Prettier, Peacock, Andromeda, Wakatime(follow the videos on setting up) -->
+    <!-- Folder Organization and How to open different folders with NEW WINDOWS-->
+    <!-- Sabio Templates -->
+    <!-- Snippets in VSCode -->
+    <!-- jQuery https://api.jquery.com/-->
+
+    <script>
+      // Arrays
+      // loops
+      var numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      console.log("This is the sample Array of numbers: ", numberArray);
+
+      function loopThroughArray(parameterOne) {
+        const num = 0;
+        for (let index = 0; index < parameterOne.length; index++) {
+          const individualNumberfromArray = parameterOne[index];
+          // console.log(individualNumberfromArray);
+        }
+        return parameterOne; // here we return the parameter - we made no changes
+      }
+
+      var allOfTheNumbers = loopThroughArray(numberArray);
+      console.log("Here are all the numbers: ", allOfTheNumbers);
+
+      function addToTheArray(parameterTwo) {
+        const modifiedArray = []; // empty to start
+        for (let index = 0; index < parameterTwo.length; index++) {
+          const arrNums = parameterTwo[index] + 10;
+          modifiedArray.push(arrNums);
+        }
+        return modifiedArray;
+      }
+
+      var addingTen = addToTheArray(numberArray);
+      console.log("Here are all the numbers with 10 added to each: ", addingTen);
+
+      //======================  Working with Strings ======================================
+
+      var nameArray = ["Alice", "Billy", "Charles", "Donna", "Edward", "Francis", "George", "Hector", "Isabella", "Jacob", "Hank"];
+      console.log("This is the sample Array of names: ", nameArray);
+
+      function addNameDescription(parameterThree) {
+        const modifiedNamesObj = [];
+        for (let index = 0; index < parameterThree.length; index++) {
+          const obj = { firstName: parameterThree[index] };
+          modifiedNamesObj.push(obj); // Add the object to the new array
+        }
+        return modifiedNamesObj;
+      }
+
+      var firstNamesObj = addNameDescription(nameArray);
+      console.log("First Name added as a Key(to the Value): ", firstNamesObj);
+    </script>
+  </body>
+</html>

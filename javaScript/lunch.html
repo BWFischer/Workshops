@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I am at Lunch!</title>
+  </head>
+  <body></body>
+  <script>
+    // Define a function that returns a random item from an array
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
+    function randomItem(array) {
+      return array[Math.floor(Math.random() * array.length)];
+    }
+    var lunchItems = ["sandwich", "salad", "pizza", "burger", "sushi", "ramen", "taco", "burrito"];
+
+    var emojis = ["😋", "😍", "🤤", "😎", "🥳", "👌", "👍", "🙌"];
+
+    // back-tick concatination
+    //
+    var message = `I'm at lunch, eating a delicious ${randomItem(lunchItems)} ${randomItem(emojis)}`;
+
+    console.log(message);
+    alert(message);
+  </script>
+</html>

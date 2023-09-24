@@ -1,0 +1,74 @@
+/* Basic CSS Styles */
+
+/* Targeting the header element */
+header {
+  background-color: #491f4e;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Styling the navigation menu */
+nav {
+  background-color: #13cee6;
+  padding: 5px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Styling the container divs */
+.container {
+  border: 2px solid #4535c5;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Highlighted div */
+.highlight {
+  background-color: yellow;
+}
+
+/* Styling semantic elements */
+article {
+  font-style: italic;
+}
+
+aside {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.custom-section {
+  border: 1px solid #777;
+  padding: 15px;
+  background-color: #33f907;
+}
+
+/* ID-specific styles */
+#special-id {
+  font-weight: bold;
+  color: green;
+}

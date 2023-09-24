@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- commonly used in web development to ensure that webpages are displayed in a user-friendly and responsive manner across various devices with different screen sizes.e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- this is how we link the HTML page to the .CSS file -->
+    <link rel="stylesheet" href="htmlExample.css" />
+    <title>HTML Demo!</title>
+
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Sabio HTML Demo!</h1>
+      <img src="sabio_cod_small_dream_big.png" alt="Sabio Logo" width="200" height="200" />
+      <nav>
+        <ul>
+          <li><a href="https://www.google.com">Search Google</a></li>
+          <li><a href="https://www.sabio.la" target="_blank">Visit Sabio!</a></li>
+        </ul>
+      </nav>
+      <!-- While they are essential HTML elements used for structuring and displayingcontent, they are not specifically designed to convey the meaning or
+      structure of the content they enclose. Semantic elements are HTML elements that carry meaning, making it easier for both humans and machines (like search
+      engines) to understand the purpose and context of the content.  -->
+    </header>
+
+    <div class="container">
+      <h2>Semantic HTML Example</h2>
+
+      <article>
+        <h3>What is Semantic HTML?</h3>
+        <p>Semantic HTML elements provide meaning to the structure of a web page. They enhance accessibility and SEO.</p>
+      </article>
+      <aside>
+        <h3>Benefits of Semantic HTML</h3>
+        <ul>
+          <li>Improved Accessibility</li>
+          <li>Clearer Document Structure</li>
+          <li>Better SEO Ranking</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="container">
+      <h2>Using Divs as Semantic Markup</h2>
+      <div class="highlight">
+        <h3 class="custom-section">Custom Section</h3>
+        <p>This div is used to create a custom section with a specific style.</p>
+      </div>
+      <div>
+        <h3>Wrapping Semantic Elements</h3>
+        <p>We can use divs to wrap semantic elements for styling purposes.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Examples of specific HTML tags</h2>
+
+      <div class="highlight">
+        <h3>This section contains a p-Tag</h3>
+        <p>
+          p-Tags are used to define paragraphs of text, but it doesn't provide additional information about the purpose or role of the content within the
+          paragraph.
+        </p>
+      </div>
+
+      <div>
+        <h3>This section contains an a-Tag</h3>
+        <p>
+          The a-Tag element is used to create hyperlinks, allowing users to navigate to other resources. While it does have a purpose (linking content), it
+          doesn't inherently indicate the nature of the link or its relationship to the surrounding content. EXAMPLE:
+        </p>
+        <a href="https://www.sabio.la" target="_blank">Visit Sabio!</a>
+      </div>
+
+      <div>
+        <h3>Wrapping Semantic Elements</h3>
+        <p>We can use divs to wrap semantic elements for styling purposes.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Attributes in HTML</h2>
+      <p>The <code>class</code> and <code>id</code> attributes are global attributes.</p>
+      <p>The <code>href</code> and <code>src</code> attributes are commonly used.</p>
+    </div>
+    <!-- <p style="color: blue; font-size: 46px">I'm a big, blue, <strong>strong</strong> paragraph</p> -->
+  </body>
+</html>

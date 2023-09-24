@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <title>jQuery Demo</title>
+
+    <style>
+      ul {
+        list-style: none;
+        padding: 10px;
+        width: 50%;
+      }
+
+      li {
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        background-color: #f2f2f2;
+        cursor: pointer;
+      }
+
+      button {
+        margin: 5px;
+      }
+
+      .highlight {
+        background-color: #f7eb08;
+      }
+      #itemList {
+        width: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>jQuery Demo</h1>
+          <div>toggleClass is Active and will TOGGLE the highlights on the "Item" elements below:</div>
+
+          <div class="btn-group mb-3" role="group" aria-label="Group One">
+            <button type="button" id="appendBtn" class="btn btn-primary">.append() Item</button>
+            <button type="button" id="addClassBtn" class="btn btn-primary">.addClass() to All</button>
+            <button type="button" id="removeClassBtn" class="btn btn-primary">.removeClass() from All</button>
+          </div>
+
+          <div class="btn-group mb-3" role="group" aria-label="Group Two">
+            <!-- .html() -->
+            <button type="button" id="changeHtmlBtn" class="btn btn-success">Change Item via .html()</button>
+
+            <!-- .clone() -->
+            <button type="button" id="cloneItemBtn" class="btn btn-success">.clone .first() Item in List</button>
+
+            <!-- .remove() -->
+            <button type="button" id="removeItemBtn" class="btn btn-success">.remove() Last Item</button>
+          </div>
+
+          <div class="btn-group mb-3" role="group" aria-label="Group Three">
+            <!-- .empty() -->
+            <button type="button" id="emptyListBtn" class="btn btn-danger">.empty() the List</button>
+          </div>
+          <ul id="itemList">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        wireUpHandlers();
+
+        function wireUpHandlers() {
+          $("#appendBtn").on("click", appendNewItem);
+          $("#addClassBtn").on("click", addClassToItems);
+          $("#removeClassBtn").on("click", removeClassFromItems);
+          $("#changeHtmlBtn").on("click", changeHtmlOfItem);
+          $("#cloneItemBtn").on("click", cloneItem);
+          $("#removeItemBtn").on("click", removeItem);
+          $("#emptyListBtn").on("click", emptyList);
+          //
+          // These targets require an additional "qualifier class"
+          //   to be added after the "click", to properly select
+          //   an item in the general "space" of the #itemList.
+          //$("#itemList").on("mouseover mouseout", "li", toggleHighlight); //event delegation
+          $("#itemList").on("click", "li", toggleClassOnItemClicked); // event delegation
+        }
+
+        function appendNewItem() {
+          console.log("appendNewItem fired");
+          $("#itemList").append("<li>New Item</li>");
+        }
+
+        function addClassToItems() {
+          console.log("addClassToItems fired");
+          $("#itemList li").addClass("highlight");
+        }
+
+        function removeClassFromItems() {
+          console.log("removeClassFromItems fired");
+          $("#itemList li").removeClass("highlight");
+        }
+
+        function removeItem() {
+          console.log("removeItem fired");
+          $("#itemList li").last().remove();
+        }
+
+        function changeHtmlOfItem() {
+          console.log("changeHtmlOfItem fired!");
+          $("#itemList li").first().html("New HTML for First Item in List");
+        }
+
+        function cloneItem() {
+          console.log("cloneItem fired");
+          $("#itemList li").first().clone().appendTo("#itemList");
+        }
+
+        function emptyList() {
+          console.log("emptyList fired");
+          $("#itemList").empty();
+        }
+
+        function toggleHighlight() {
+          console.log("toggleHighlight fired");
+          $(this).toggleClass("highlight");
+        }
+
+        function toggleClassOnItemClicked() {
+          console.log("toggleClassOnItemClicked fired!");
+          $(this).toggleClass("highlight");
+        }
+      });
+    </script>
+  </body>
+</html>
